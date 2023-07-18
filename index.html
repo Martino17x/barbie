@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Barbie</title>
+</head>
+<body>
+    <header>
+        <h1>BARBIE LOVER</h1>
+    </header>
+    <main>
+        <div class="video-ctn">
+            <video id="videoMuted" autoplay muted loop>
+                <source src="img/barbie.webm" type="video/webm">
+            </video>
+        </div>
+            <div class="button-ctn">
+                <a href="https://wa.me/543549436561?text=Si%20voy" target="_blank" class="button">CONFIRMAR INVITACIÓN</a>
+                <button id="soundButton" onclick="toggleSound()" class="button-2">ACTIVAR SONIDO</button>
+            </div>
+    </main>
+
+    <div id="centerButton" onclick="toggleSound()">ACTIVAR SONIDO</div>
+
+    <script>
+        function toggleSound() {
+            var video = document.getElementById('videoMuted');
+            video.muted = !video.muted;
+
+            var soundButton = document.getElementById('soundButton');
+            var centerButton = document.getElementById('centerButton');
+            if (video.muted) {
+                soundButton.textContent = 'ACTIVAR SONIDO';
+                centerButton.style.display = 'block';
+            } else {
+                soundButton.textContent = 'DESACTIVAR SONIDO';
+                centerButton.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -56,11 +56,12 @@ video {
 
 .button-ctn {
     position: absolute;
+    width: 100%;
     bottom: 0;
 }
 .button {
-    position: relative;
     display: inline-block;
+    position: relative;
     width: 100%;
     border: 1px solid #000;
     background: palevioletred;
@@ -109,4 +110,5 @@ video {
         left: 50%; 
         transform: translateX(-50%);
     }
+
 }
